@@ -1,0 +1,69 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@using MvcApp.Models
+
+@model IndexViewModel
+
+<h1>Магазин мужской одежды</h1>
+<p><a asp-action="Create">Выбор одежды</a></p>
+<form method="get">
+
+
+    <label>Категория одежды: </label>
+    <select name="cloth_type" asp-items="Model.FilterViewModel.Cloth_types"></select>
+    <table>
+    <tr>
+            <th>
+
+    <label>Размер одежды:  </label>
+    <input name="Cloth_size" value="@Model.FilterViewModel.SelectedName" />
+            </th>
+
+            <th><input type="submit" value="Фильтр" /><th>
+        </tr>
+
+</form>
+
+<table>
+    <tr>
+        <th>
+            Категория одежды
+        </th>
+        <th>Размер</th>
+        <th>Бренд</th>
+    </tr>
+    @foreach (Cloth item in Model.Clothes)
+    {
+        <tr>
+            <td>@item.Cloth_type?.Name_cloth_type</td>
+            <td>@item.Cloth_size</td>
+            <td>@item.Cloth_brand</td>
+            <td>
+                <form asp-controller="Home" asp-action="Delete" method="post" asp-route-id="@item.Id">
+                    <input type="submit" value="Удалить" />
+                </form>
+            </td>
+        </tr>
+    }
+</table>
+<p>
+    @if (Model.PageViewModel.HasPreviousPage)
+    {
+        <a asp-action="Index"
+           asp-route-page="@(Model.PageViewModel.PageNumber - 1)"
+           asp-route-name="@(Model.FilterViewModel.SelectedName)"
+           asp-route-company="@(Model.FilterViewModel.Selected_Cloth_type)"
+           class="glyphicon glyphicon-chevron-left">
+            Назад
+        </a>
+    }
+    @if (Model.PageViewModel.HasNextPage)
+    {
+        <a asp-action="Index"
+           asp-route-page="@(Model.PageViewModel.PageNumber + 1)"
+           asp-route-name="@(Model.FilterViewModel.SelectedName)"
+           asp-route-company="@(Model.FilterViewModel.Selected_Cloth_type)"
+           class="glyphicon glyphicon-chevron-right">
+            Вперед
+        </a>
+    }
+</p>

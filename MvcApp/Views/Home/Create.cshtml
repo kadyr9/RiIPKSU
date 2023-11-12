@@ -1,0 +1,23 @@
+﻿@model MvcApp.Models.Cloth
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@using MvcApp.Models
+
+<h2>Добавить одежду</h2>
+
+<form asp-action="Create" asp-controller="home">
+    <p>
+        <label asp-for="Cloth_type">Категория одежды</label><br />
+        <select asp-for="Id_type_cloth" asp-items="ViewBag.Cloth_types"></select>
+    </p>
+    <p>
+        <label asp-for="Cloth_size">Размер одежды</label><br />
+        <input type="text" asp-for="Cloth_size" />
+    </p>
+    <p>
+        <label asp-for="Cloth_brand">Бренд одежды</label><br />
+        <input type="text" asp-for="Cloth_brand" />
+    </p>
+    <p>
+        <input type="submit" value="Отправить" />
+    </p>
+</form>
