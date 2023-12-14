@@ -8,6 +8,8 @@ string connection = "Server = (localdb)\\mssqllocaldb;Database = clothstoredb;Tr
 builder.Services.AddDbContext<ApplicationContext>(options => options.UseSqlServer(connection));
 
 builder.Services.AddControllersWithViews();
+builder.Services.AddHostedService<BackgroundWorkerService>();
+
 
 var app = builder.Build();
 

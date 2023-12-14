@@ -2620,24 +2620,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\1\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\taliz\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\1\\source\\repos\\MvcApp\\MvcApp.csproj",
+      "projectUniqueName": "C:\\Users\\taliz\\Downloads\\RiIPKSU-main\\RiIPKSU-main\\MvcApp\\MvcApp.csproj",
       "projectName": "MvcApp",
-      "projectPath": "C:\\Users\\1\\source\\repos\\MvcApp\\MvcApp.csproj",
-      "packagesPath": "C:\\Users\\1\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\1\\source\\repos\\MvcApp\\obj\\",
+      "projectPath": "C:\\Users\\taliz\\Downloads\\RiIPKSU-main\\RiIPKSU-main\\MvcApp\\MvcApp.csproj",
+      "packagesPath": "C:\\Users\\taliz\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\taliz\\Downloads\\RiIPKSU-main\\RiIPKSU-main\\MvcApp\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\1\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\taliz\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2687,7 +2682,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }
